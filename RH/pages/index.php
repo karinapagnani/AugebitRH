@@ -221,6 +221,84 @@ a {
 }
 
 
+
+
+
+.process-flow {
+        padding: 4rem 0;
+    }
+
+    .process-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+
+    .step-marker {
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--primary-color);
+        min-width: 60px;
+        display: inline-block;
+    }
+
+    .step-content {
+        flex-grow: 1;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 3rem;
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #222;
+    }
+
+    .step-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #666;
+        max-width: 480px;
+    }
+
+    .step-connector {
+        position: absolute;
+        bottom: -1rem;
+        left: 28px;
+        width: 1px;
+        height: 2rem;
+        background: #ddd;
+    }
+
+    @media (min-width: 768px) {
+        .process-step {
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .step-marker {
+            font-size: 2.5rem;
+            text-align: right;
+            min-width: 80px;
+        }
+
+        .step-content {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .step-connector {
+            left: 64px;
+            height: 4rem;
+        }
+    }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -269,6 +347,57 @@ a {
     </div>
   </div>
 </section>
+
+
+
+
+<section class="container">
+    <div class="content-section">
+        
+        <div class="process-flow">
+          
+            <div class="process-step">
+                <span class="step-marker">01</span>
+                <div class="step-content">
+                    <h2 class="step-title">Imersão Estratégica</h2>
+                    <p class="step-description">
+                        Pesquisa de mercado e análise comportamental para fundamentar cada decisão de design.
+                    </p>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+        
+            <div class="process-step">
+                <span class="step-marker">02</span>
+                <div class="step-content">
+                    <h2 class="step-title">Prototipagem Dinâmica</h2>
+                    <p class="step-description">
+                        Desenvolvimento iterativo de conceitos com testes de usabilidade em tempo real.
+                    </p>
+                </div>
+                <div class="step-connector"></div>
+            </div>
+
+          
+            <div class="process-step">
+                <span class="step-marker">03</span>
+                <div class="step-content">
+                    <h2 class="step-title">Implementação Eficaz</h2>
+                    <p class="step-description">
+                        Execução monitorada com métricas precisas e ajustes contínuos para otimização.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
     </main>
    <footer class="footer">
         <div class="container footer-container">
