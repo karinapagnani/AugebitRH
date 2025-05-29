@@ -184,7 +184,7 @@
                 <li><a href="#">Contato</a></li>
                 <li><a href="#" class="active">Biblioteca</a></li>
             </ul>
-            <a href="./login.php" class="btn-header">Cadastre-se</a>
+            <a href="../autenticacao/login.php" class="btn-header">Cadastre-se</a>
         </nav>
     </div>
 </header>

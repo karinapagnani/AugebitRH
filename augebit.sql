@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23/05/2025 às 21:11
+-- Tempo de geração: 29/05/2025 às 15:28
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -135,15 +135,30 @@ CREATE TABLE `funcionarios` (
   `email` varchar(255) NOT NULL,
   `telefone` int(11) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `setor` varchar(255) NOT NULL
+  `setor` varchar(255) NOT NULL,
+  `cpf` int(12) NOT NULL,
+  `nascimento` date NOT NULL,
+  `biografia` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_secundario` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `celular` int(20) NOT NULL,
+  `cep` int(8) NOT NULL,
+  `logadouro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `numero` int(11) NOT NULL,
+  `complemento` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bairro` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cidade` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `estado` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `linkedin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `github` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `funcionarios`
 --
 
-INSERT INTO `funcionarios` (`id`, `nome`, `email`, `telefone`, `senha`, `setor`) VALUES
-(3, 'Vitor Vas', 'vas@augebit.br', 2147483647, '$2y$10$9WK4OLpcy64aqZzrcceB.uSczsNeNWYFMaHHx8P5U2daU1XNwrrya', 'Jurídico');
+INSERT INTO `funcionarios` (`id`, `nome`, `email`, `telefone`, `senha`, `setor`, `cpf`, `nascimento`, `biografia`, `email_secundario`, `celular`, `cep`, `logadouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `linkedin`, `github`, `instagram`) VALUES
+(6, 'Victor Rodrigues Cavalcante Rocha', 'victorrocha0223@gmail.com', 2147483647, '$2y$10$3T1033skgG/scBnSeHIJm.mZe5/I.aSOw8j46OiROqp12xCXt3V8W', 'TI', 0, '0000-00-00', '', '', 0, 0, '', 0, '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -168,7 +183,21 @@ INSERT INTO `recrutamento` (`id`, `nome`, `email`, `vaga`, `curriculo`, `data_ca
 (1, 'karina', 'kakapagnani@gmail.com', 'capa', 'lero lero lero', '2025-05-23 14:51:26'),
 (2, 'karina', 'kakapagnani@gmail.com', 'capa', 'lero lero lero', '2025-05-23 14:53:29'),
 (3, 'jeff', 'teacher@gmail.com', 'capa', '_docs_financas-pessoais.pdf', '2025-05-23 14:53:51'),
-(4, 'jeff', 'teacher@gmail.com', 'capa', '_docs_financas-pessoais.pdf', '2025-05-23 17:41:07');
+(4, 'jeff', 'teacher@gmail.com', 'capa', '_docs_financas-pessoais.pdf', '2025-05-23 17:41:07'),
+(5, 'Victor', 'teacher@gmail.com', 'capa', '', '2025-05-29 11:43:06'),
+(6, 'Victor', 'teacher@gmail.com', 'capa', '', '2025-05-29 11:45:35'),
+(7, 'Victor', 'teacher@gmail.com', 'capa', '', '2025-05-29 11:46:33'),
+(8, 'bigpurple', 'kakapagnani@gmail.com', 'capa', '', '2025-05-29 11:46:53'),
+(9, 'bigpurple', 'kakapagnani@gmail.com', 'capa', '', '2025-05-29 12:10:15'),
+(10, 'bigpurple', 'kakapagnani@gmail.com', 'capa', '_docs_financas-pessoais.pdf', '2025-05-29 12:14:00'),
+(11, 'bigpurple', 'kakapagnani@gmail.com', 'capa', '_docs_financas-pessoais.pdf', '2025-05-29 12:14:13'),
+(12, 'Joaozinho', 'joao@gmail.com', 'TI', 'Documentacao_BigPurple.pdf', '2025-05-29 12:15:02'),
+(13, 'Joaozinho', 'joao@gmail.com', 'TI', 'Documentacao_BigPurple.pdf', '2025-05-29 12:18:21'),
+(14, 'Joaozinho', 'joao@gmail.com', 'TI', 'Documentacao_BigPurple.pdf', '2025-05-29 12:24:52'),
+(15, 'Joaozinho', 'joao@gmail.com', 'TI', 'Documentacao_BigPurple.pdf', '2025-05-29 12:25:11'),
+(16, 'vitor ', 'vitorvasc2109@gmail.com', 'TI', 'Questões - Bootstrap.docx', '2025-05-29 13:11:36'),
+(17, 'vitor ', 'vitorvasc2109@gmail.com', 'TI', 'Questões - Bootstrap.docx', '2025-05-29 13:19:29'),
+(18, 'vitor ', 'vitorvasc2109@gmail.com', 'TI', 'Questões - Bootstrap.docx', '2025-05-29 13:19:36');
 
 --
 -- Índices para tabelas despejadas
@@ -254,13 +283,13 @@ ALTER TABLE `folha_pagamento`
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `recrutamento`
 --
 ALTER TABLE `recrutamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
