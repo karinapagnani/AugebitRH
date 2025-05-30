@@ -296,9 +296,6 @@ a {
     }
 
 
-
-
-
     </style>
 </head>
 <body>
@@ -308,7 +305,7 @@ a {
         <nav>
             <ul>
                 <li><a href="index.php" class="active">Home</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#services-section">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="biblioteca.php">Biblioteca</a></li>
             </ul>

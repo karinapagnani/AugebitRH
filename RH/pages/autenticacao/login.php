@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'conexao.php';
 
@@ -20,6 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $erro = "Credenciais inválidas!";
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -294,6 +297,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>Novo por aqui? <a href="cadastro.php">Criar nova conta</a></p>
         </div>
     </div>
+    <php
+    $_SESSION['usuario'] = $usuario;
     
+/>
 </body>
 </html>

@@ -154,7 +154,7 @@
         }
 
         /* Responsivo */
-        @media (max-width: 768px) {
+        @media (max-width: 1500px) {
             .container {
                 padding: 0 1.5rem;
             }
@@ -189,7 +189,7 @@
     </div>
 </header>
 
-<main class="container">
+<main class="container p">
 <div class="filters">
     <button class="filter-btn active" onclick="filtrarRecursos('todos')">Todos</button>
     <button class="filter-btn" onclick="filtrarRecursos('article')">Artigos</button>

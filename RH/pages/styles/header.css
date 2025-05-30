@@ -1,3 +1,9 @@
+:root {
+            --primary-color: #6c63ff;
+            --text-color: #2d2d2d;
+            --light-gray: #666;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 header { 
     padding: 1.5rem 0;
     position: sticky;
